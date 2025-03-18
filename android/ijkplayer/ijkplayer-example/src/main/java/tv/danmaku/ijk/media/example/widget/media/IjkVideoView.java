@@ -533,6 +533,16 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                     }
                     return true;
                 }
+
+                @Override
+                public boolean onInfoSEI(IMediaPlayer mp, int what, int extra, String sei_content) {
+                    return false;
+                }
+
+                @Override
+                public void onInfoAudioPcmData(IMediaPlayer mp, byte[] arrPcm, int length) {
+
+                }
             };
 
     private IMediaPlayer.OnErrorListener mErrorListener =
